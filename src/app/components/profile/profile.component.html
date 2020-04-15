@@ -11,6 +11,7 @@
          <div class="panel-heading">
              <span>Name: ({{profile.name}})
                  location:<small>{{profile.location}}</small></span>
+                  , study at{{profile.company}}
          </div>
          <div class="panel-body">
              <div class="row">
@@ -49,7 +50,7 @@
                                </div>
                                <div class="panel-body" *ngFor="let repo of repos">
                                    <p>
-                                       {{repos.name}} <a href="{{repo.html_url}}" target="_blank"
+                                       {{repos.name}} <a href="{{repos.html_url}}" target="_blank"
                                            class="btn btn-primary">view this project on github
                                        </a>
                                        
