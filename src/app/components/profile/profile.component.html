@@ -1,6 +1,8 @@
-<h1>GIT-PROFILE</h1>
-<img src="https://bit.ly/3a8Bncn" alt="">
+ 
+
 <form action="" class="search-form">
+    <h1 class="h1">GIT-PROFILE</h1>
+<img  class="img2" src="https://bit.ly/3a8Bncn" alt="">
 <div class="form-group">
     <input type="text" class="form-control" placeholder="search git users with username" 
     [(ngModel)]="username" name="username" (keyup)="findProfile()">
@@ -13,14 +15,14 @@
          <div class="panel-heading">
              <span>Name: ({{profile.name}})
                  location:<small>{{profile.location}}</small></span>
-                  , {{profile.company}}
+                  
          </div>
          <div class="panel-body">
              <div class="row">
                  <div class="col-sm-3">
                      <img src="{{profile.avatar_url}}"  class="img"alt="">
                  </div>
-                   <div class="col-sm-7">
+                   <div class="col-sm-4">
                       <ul class="list-group">
                           <li class="list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
                           <li class="list-group-item"*ngIf="profile.blog"><a href="{{profile.blog}}">{{profile.blog}}</a></li>
@@ -28,7 +30,7 @@
                         </ul> 
                    </div>
                    <hr>
-                   <div class="col-sm-5">
+                   <div class="col-sm-0">
                        <div>
                            <p>
                                <span class="btn btn-secondary">{{profile.followers}} Followers
