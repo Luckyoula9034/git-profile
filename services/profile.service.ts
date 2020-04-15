@@ -7,14 +7,17 @@ export class ProfileService {
    private username:string;
    private clientid= '6f37eacbd3d8e750d96f'
    private clientsecret='3298fc43941620572fa5c506c3cc977e0c3d561b';
+
   constructor(private http:HttpClient) { 
     console.log("service is ready")
     this.username = 'luckyoula9034'
   }
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)};
+
+
   getprofileRepos(){
-    return this.http.get("https://api.github.com/users/" + this.username + "/?reposclient_id=" + this.clientid + "&client_secret=" + this.clientsecret)};
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)};
     updateProfile(username:string){
       this.username = username;
       
