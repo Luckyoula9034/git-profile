@@ -1,3 +1,5 @@
+<h1>GIT-PROFILE</h1>
+<img src="https://bit.ly/3a8Bncn" alt="">
 <form action="" class="search-form">
 <div class="form-group">
     <input type="text" class="form-control" placeholder="search git users with username" 
@@ -11,28 +13,29 @@
          <div class="panel-heading">
              <span>Name: ({{profile.name}})
                  location:<small>{{profile.location}}</small></span>
-                  , study at{{profile.company}}
+                  , {{profile.company}}
          </div>
          <div class="panel-body">
              <div class="row">
                  <div class="col-sm-3">
                      <img src="{{profile.avatar_url}}"  class="img"alt="">
                  </div>
-                   <div class="col-sm-5">
+                   <div class="col-sm-7">
                       <ul class="list-group">
                           <li class="list-group-item"*ngIf="profile.bio">{{profile.bio}}</li>
-                          <li class="list-group-item"*ngIf="profile.blog">{{profile.blog}}</li>
+                          <li class="list-group-item"*ngIf="profile.blog"><a href="{{profile.blog}}">{{profile.blog}}</a></li>
                           <li class="list-group-item"*ngIf="profile.email">{{profile.email}}</li>
                         </ul> 
                    </div>
-                   <div class="col-sm-4">
+                   <hr>
+                   <div class="col-sm-5">
                        <div>
                            <p>
                                <span class="btn btn-secondary">{{profile.followers}} Followers
                                     </span>
-                                    
 
-                               <span class="btn btn-danger">{{profile.following}} Following
+
+                                    <span class="btn btn-danger">{{profile.following}} Following
 
                                </span>
                                <span class="btn btn-warning">{{profile.public_gists}}public gist 
@@ -49,7 +52,7 @@
 
                                </div>
                                <div class="panel-body" *ngFor="let repo of repos">
-                                   <p>
+                                   <p class="clearfix">
                                        {{repos.name}} <a href="{{repos.html_url}}" target="_blank"
                                            class="btn btn-primary">view this project on github
                                        </a>
